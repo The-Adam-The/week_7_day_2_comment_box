@@ -1,8 +1,11 @@
-
+import Comment from './Comment.js'
 
 const CommentList = () => {
     return(
-        <p>I'm a comment list</p>
+        <>
+            <h2>I'm a comment list</h2>
+            <Comment/>
+        </>
     );
 };
 

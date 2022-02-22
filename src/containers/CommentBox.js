@@ -1,4 +1,5 @@
 import CommentList from "../components/CommentList";
+
 const CommentBox = () => {
     return (
         <>
