@@ -1,10 +1,17 @@
 import Comment from './Comment.js'
 
-const CommentList = () => {
+const CommentList = ({comments}) => {
+
+    const commentNodes = comments.map((comment) => {
+        return (
+            <Comment author={comment.author} text={comment.text}/>
+        );  
+    });
+
     return(
         <>
-            <h2>I'm a comment list</h2>
-            <Comment/>
+            <h2>Comments: </h2>
+            {commentNodes}
         </>
     );
 };

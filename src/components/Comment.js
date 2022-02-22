@@ -1,6 +1,10 @@
-const Comment = () => {
+const Comment = ({author, text}) => {
+     
     return (
-        <p>I'm a comment</p>
+        <div className="comment">
+            <h4>{author}</h4>
+            <p>{text}</p>
+        </div>
     );
 };
 
