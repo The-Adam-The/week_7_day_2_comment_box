@@ -26,3 +26,7 @@ p {
 .comment {
   margin: 0 0 20px 15px;
 }
+
+.comment-form {
+  padding: 0 10px 10px 10px;
+}

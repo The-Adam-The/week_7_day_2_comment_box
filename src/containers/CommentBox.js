@@ -1,5 +1,6 @@
 import CommentList from '../components/CommentList';
 import {useState} from 'react';
+import CommentForm from '../components/CommentForm';
 
 const CommentBox = () => {
     const [comments, setComments] = useState(				
@@ -20,16 +21,29 @@ const CommentBox = () => {
             text: "Eh, it's ok..."
           },
           {
-              id: 4,
-              author: "Jim Jones",
-              text: "What's a 'react'?"
+            id: 4,
+            author: "Jim Jones",
+            text: "What's a 'react'?"
           }
         ]
-      )
+      );
+
+      const addComment = (comment) => {
+        comment.id = Date.now();
+        const updatedComments = [...comments, comment];
+        setComments(updatedComments);
+      };
     return (
+      <>
         <div className="comment-box">
             <CommentList comments={comments}/>
         </div>
+        <div>
+          <h1>Add a comment:</h1>
+          <CommentForm onCommentSubmit={addComment}/>
+        </div>
+      </>
+
     );
 };
 
